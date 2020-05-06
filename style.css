@@ -1,0 +1,87 @@
+.cube{
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 400px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation-name: rotation;
+    -webkit-animation-timing-function: cubic-bezier(0.6, -1, 0.4, 1.5);
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 15s;
+    align: center;
+  }
+  @-webkit-keyframes rotation{
+    from, to{}
+     10%, 25%{-webkit-transform: rotateX(-90deg);}
+     35%, 50%{-webkit-transform: rotateX(-180deg);}
+     60%, 75%{-webkit-transform: rotateX(-270deg);}
+     85%, 100%{-webkit-transform: rotateX(-360deg);}
+  }
+  .cube div{
+    background-color: #000;
+    background-size: 450px 300px;
+    position: absolute;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-backface-visibility: hidden;
+  }
+  .cube div.fb{
+    width: 150px;
+    height: 300px;
+  }
+  .cube div.tb{
+    width: 150px;
+    height: 300px;  
+  }
+  .cube div.lr{
+    width: 400px;
+    height: 400px;
+  }
+  .facefront{
+    background-image:url(3.jpg);
+    -webkit-transform: translateZ(150px); 
+  }
+  .faceback{
+    background-image:url(1375503404_ac6b7355496d.png);
+    -webkit-transform: translateZ(150px) rotateY(180deg) rotateZ(180deg);
+  }
+  .facetop{
+    background-image:url(a08612361_8698031.jpg);
+    -webkit-transform: rotateX(90deg) translateZ(150px);
+  }
+  .facebottom{
+    background-image:url(kinderhobby.ru-mashamedved_1920x1080_1441215836.jpg);
+    -webkit-transform: rotateX(-90deg) translateZ(150px);
+  }
+  .faceleft{
+    -webkit-transform: rotateY(90deg) translateZ(0px);
+  }
+  .faceright{
+    -webkit-transform: rotateY(-90deg) translateZ(150px);
+  }
+  #cube1 div{
+    background-position: 0 0;
+  }
+  #cube2 div{
+    background-position: -150px 0;
+  }
+  #cube3 div{
+    background-position: -300px 0;
+  }
+  #cube1{
+    z-index: 1;
+    -webkit-animation-delay: 1s;
+    padding-top: .5em;
+    padding-left: 1em;
+  }
+  #cube2{
+    z-index: 2;
+    -webkit-animation-delay: 1.2s;
+    padding-top: .5em;
+  }
+  #cube3{
+    z-index: 1;
+    -webkit-animation-delay: 1.4s;
+    padding-right: .5em;
+    padding-top: .5em;
+  }
